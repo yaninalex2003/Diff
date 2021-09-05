@@ -1,4 +1,8 @@
 import java.io.File
+fun max(a:Int, b:Int):Int{
+    if (a>b) return a
+    else return b
+}
 fun main(args: Array<String>) {
     var text1: Array<String> = arrayOf()
     for (line in File("test1.txt").readLines()){
@@ -17,19 +21,16 @@ fun main(args: Array<String>) {
                 matrix[j][i]=matrix[j-1][i-1]+1
             }
             else{
-                if (matrix[j-1][i]>matrix[j][i-1]) matrix[j][i]=matrix[j-1][i]
-                else matrix[j][i]=matrix[j][i-1]
+                matrix[j][i]=max(matrix[j][i-1],matrix[j-1][i])
             }
         }
     }
-    var ans1: Array<Int> = arrayOf()
-    var ans2: Array<Int> = arrayOf()
+    var ans: Array<String> = arrayOf()
     var i = vysota
     var j = shirina
     while (i>0 && j>0) {
         if (text1[j-1]==text2[j-1]){
-            ans1 = ans1 +(j-1)
-            ans2 = ans2 +(i-1)
+            ans = ans +text1[j-1]
             i-=1
             j-=1
         }
@@ -40,12 +41,14 @@ fun main(args: Array<String>) {
             i-=1
         }
     }
-    ans1.reversed()
-    ans2.reversed()
-    var a = vysota-1
-    if (a<shirina) a=shirina-1
+    var a = max(vysota-1, shirina-1)
     while (a>=0){
-
+        if (a<=shirina-1 && text1[a] !in ans) {
+            println("Удалить строку номер ${a+1} : ${text1[a]}")
+        }
+        if (a<=vysota-1 && text2[a] !in ans) {
+            println("Добавить строку номер ${a+1} : ${text2[a]}")
+        }
         a-=1
     }
 }
