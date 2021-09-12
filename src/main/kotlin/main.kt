@@ -1,6 +1,6 @@
 import java.io.File
 
-fun main(args: Array<String>) {
+fun main() {
     val text1 = scanFile("test1.txt")
     val text2 = scanFile("test2.txt")
     val ourMatrix = matrix(text1, text2)
