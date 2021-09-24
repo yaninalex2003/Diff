@@ -1,22 +1,43 @@
+//Программа создана с целью сравнения двух текстовых файла, вычисления разницы
+//между ними в виде последовательности вставляемых и удаляемых строк.
+//Программа запрашивает у пользователя названия сначала первого файла, затем второго.
+//Программа выводит пользователю последовательность действий, которые позволяют из первого файла
+//получить второй
+//Действия бывают двух типов:
+//   1)Добавить строку. В этом случае вывод осуществляется зеленым цветом,
+//   первым символом вывода является знак "+", затем выводится место N, на которое эту строку
+//   надо добавить (таким образом, та строка, которая до этого имела номер N, должна стать N+1-ой),
+//   затем выводится сама строка.
+//   2)Удалить строку. В этом случае вывод осуществляется красным цветом,
+//   первым символом вывода является знак "-", затем выводится номер строки, которую надо удалить - N,
+//   затем выводится сама строка.
+
 import java.io.File
 
+const val RED = "\u001B[31m"
+const val GREEN = "\u001B[32m"
+
 fun main() {
-    val text1 = scanFile("test1.txt")
-    val text2 = scanFile("test2.txt")
+    val text1 = scanFile(nameFile1())
+    val text2 = scanFile(nameFile2())
     val ourMatrix = matrix(text1, text2)
-    val ourLCS1 = findLCS(ourMatrix, text1, text2)[0]
-    val ourLCS2 = findLCS(ourMatrix, text1, text2)[1]
-    val ourAnsArray = findAns(text1, text2, ourLCS1, ourLCS2)
+    val pairOurLCS = findLCS(ourMatrix, text1, text2)
+    val ourAnsArray = findAns(text1, text2, pairOurLCS.first, pairOurLCS.second)
     printAns(ourAnsArray)
 }
 
-//нахождения максимума из двух чисел
-fun max(a: Int, b: Int): Int {
-    return if (a > b) a
-    else b
+//ввод названия файлов
+fun nameFile1(): String {
+    println("Вставьте название первого файла")
+    return readLine()!!
 }
 
-//считывание файла
+fun nameFile2(): String {
+    println("Вставьте название второго файла")
+    return readLine()!!
+}
+
+//cчитывание файла
 fun scanFile(name: String): Array<String> {
     var text: Array<String> = arrayOf()
     for (line in File(name).readLines())
@@ -32,7 +53,7 @@ fun matrix(text1: Array<String>, text2: Array<String>): Array<Array<Int>> {
             if (text1[j - 1] == text2[i - 1]) {
                 ourMatrix[i][j] = ourMatrix[i - 1][j - 1] + 1
             } else {
-                ourMatrix[i][j] = max(ourMatrix[i][j - 1], ourMatrix[i - 1][j])
+                ourMatrix[i][j] = maxOf(ourMatrix[i][j - 1], ourMatrix[i - 1][j])
             }
         }
     }
@@ -41,7 +62,7 @@ fun matrix(text1: Array<String>, text2: Array<String>): Array<Array<Int>> {
 
 //Восстановление LCS по матрице
 //Функция выводит два массива индексов строк: для первого массива строк и для второго
-fun findLCS(ourMatrix: Array<Array<Int>>, text1: Array<String>, text2: Array<String>): Array<Array<Int>> {
+fun findLCS(ourMatrix: Array<Array<Int>>, text1: Array<String>, text2: Array<String>): Pair<Array<Int>, Array<Int>> {
     var ourLCS1: Array<Int> = arrayOf()
     var ourLCS2: Array<Int> = arrayOf()
     var size1 = text1.size
@@ -58,7 +79,7 @@ fun findLCS(ourMatrix: Array<Array<Int>>, text1: Array<String>, text2: Array<Str
             size1 -= 1
         }
     }
-    return arrayOf(ourLCS1, ourLCS2)
+    return Pair(ourLCS1, ourLCS2)
 }
 
 //Вывод ответа
@@ -68,12 +89,12 @@ fun findAns(text1: Array<String>, text2: Array<String>, ourLCS1: Array<Int>, our
     var ourAnsArray: Array<String> = arrayOf()
     for (i in 0..ourLCS1.size) {
         while (indexText1 !in ourLCS1 && indexText1 >= 0) {
-            ourAnsArray += "Удалить строку с места номер ${indexText1 + 1}: ${text1[indexText1]}"
+            ourAnsArray += RED + "- ${indexText1 + 1}: ${text1[indexText1]}"
             indexText1 -= 1
         }
         val place = indexText1 + 2
         while (indexText2 !in ourLCS2 && indexText2 >= 0) {
-            ourAnsArray += "Добавить строку на место номер $place: ${text2[indexText2]}"
+            ourAnsArray += GREEN + "+ $place: ${text2[indexText2]}"
             indexText2 -= 1
         }
         indexText2 -= 1
