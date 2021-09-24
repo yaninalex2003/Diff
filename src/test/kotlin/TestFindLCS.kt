@@ -1,22 +1,20 @@
 import kotlin.test.*
 
-fun assertEqualPair(twoArrays1: Array<Array<Int>>, twoArrays2: Array<Array<Int>>) {
-    assert(twoArrays1.size == twoArrays2.size)
-    for (i in twoArrays1.indices) {
-        assertContentEquals(twoArrays1[i], twoArrays2[i])
-    }
+fun assertEqualPair(twoArrays1: Pair<Array<Int>, Array<Int>>, twoArrays2: Pair<Array<Int>, Array<Int>>) {
+    assertContentEquals(twoArrays1.first, twoArrays2.first)
+    assertContentEquals(twoArrays1.second, twoArrays2.second)
 }
 
 internal class TestFindLCS {
 
     @Test
-    fun testFindLCS() {
+    fun testFindLCS1() {
         assertEqualPair(
             findLCS(
                 matrix(arrayOf("РОмчик", "Приходил", "Сегодня"), arrayOf("Ромчик", "Приходил", "Сегодня")),
                 arrayOf("РОмчик", "Приходил", "Сегодня"),
                 arrayOf("Ромчик", "Приходил", "Сегодня")
-            ), arrayOf(arrayOf(2, 1), arrayOf(2, 1))
+            ), Pair(arrayOf(2, 1), arrayOf(2, 1))
         )
     }
 
@@ -27,7 +25,7 @@ internal class TestFindLCS {
                 matrix(arrayOf("Жили", "Были", "Дед", "И", "Баба"), arrayOf("Жили", "Дед", "И", "Дед")),
                 arrayOf("Жили", "Были", "Дед", "И", "Баба"),
                 arrayOf("Жили", "Дед", "И", "Дед")
-            ), arrayOf(arrayOf(3, 2, 0), arrayOf(2, 1, 0))
+            ), Pair(arrayOf(3, 2, 0), arrayOf(2, 1, 0))
         )
     }
 
@@ -40,7 +38,7 @@ internal class TestFindLCS {
                     arrayOf("3", "4", "5")
                 ), arrayOf("0", "1", "2"),
                 arrayOf("3", "4", "5")
-            ), arrayOf(arrayOf(), arrayOf())
+            ), Pair(arrayOf(), arrayOf())
         )
     }
 
@@ -53,7 +51,7 @@ internal class TestFindLCS {
                     arrayOf("Отношение", "Людей", "Икс")
                 ), arrayOf("Отношение", "Является", "Эквивалентностью", "На", "Икс"),
                 arrayOf("Отношение", "Людей", "Икс")
-            ), arrayOf(arrayOf(4, 0), arrayOf(2, 0))
+            ), Pair(arrayOf(4, 0), arrayOf(2, 0))
         )
     }
 
@@ -65,7 +63,7 @@ internal class TestFindLCS {
                 arrayOf("1", "2", "3"),
                 arrayOf("3", "2", "1")
             ),
-            arrayOf(arrayOf(2), arrayOf(0))
+            Pair(arrayOf(2), arrayOf(0))
         )
     }
 }
