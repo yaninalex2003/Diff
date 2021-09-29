@@ -1,0 +1,749 @@
+/*
+ * Copyright 2010-2021 JetBrains s.r.o. and Kotlin Programming Language contributors.
+ * Use of this source code is governed by the Apache 2.0 license that can be found in the license/LICENSE.txt file.
+ */
+
+// Auto-generated file. DO NOT EDIT!
+
+package Котлин
+
+/**
+ * An array of bytes. When targeting the JVM, instances of this class are represented as `byte[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class ByteArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Byte)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Byte
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Byte): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): ByteIterator
+}
+
+/**
+ * An array of chars. When targeting the JVM, instances of this class are represented as `char[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to null char (`\u0000').
+ */
+public class CharArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Char)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Char
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Char): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): CharIterator
+}
+
+/**
+ * An array of shorts. When targeting the JVM, instances of this class are represented as `short[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class ShortArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Short)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Short
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Short): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): ShortIterator
+}
+
+/**
+ * An array of ints. When targeting the JVM, instances of this class are represented as `int[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class IntArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Int)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Int
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Int): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): IntIterator
+}
+
+/**
+ * An array of longs. When targeting the JVM, instances of this class are represented as `long[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class LongArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Long)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Long
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Long): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): LongIterator
+}
+
+/**
+ * An array of floats. When targeting the JVM, instances of this class are represented as `float[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class FloatArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Float)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Float
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Float): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): FloatIterator
+}
+
+/**
+ * An array of doubles. When targeting the JVM, instances of this class are represented as `double[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to zero.
+ */
+public class DoubleArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Double)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Double
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Double): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): DoubleIterator
+}
+
+/**
+ * An array of booleans. When targeting the JVM, instances of this class are represented as `boolean[]`.
+ * @constructor Creates a new array of the specified [size], with all elements initialized to `false`.
+ */
+public class BooleanArray(size: Int) {
+    /**
+     * Creates a new array of the specified [size], where each element is calculated by calling the specified
+     * [init] function.
+     *
+     * The function [init] is called for each array element sequentially starting from the first one.
+     * It should return the value for an array element given its index.
+     */
+    public inline constructor(size: Int, init: (Int) -> Boolean)
+
+    /**
+     * Returns the array element at the given [index].  This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun get(index: Int): Boolean
+
+    /**
+     * Sets the element at the given [index] to the given [value]. This method can be called using the index operator.
+     *
+     * If the [index] is out of bounds of this array, throws an [IndexOutOfBoundsException] except in Kotlin/JS
+     * where the behavior is unspecified.
+     */
+    public operator fun set(index: Int, value: Boolean): Unit
+
+    /** Returns the number of elements in the array. */
+    public val size: Int
+
+    /** Creates an iterator over the elements of the array. */
+    public operator fun iterator(): BooleanIterator
+}
+/*
+ * Copyright 2010-2020 JetBrains s.r.o. and Kotlin Programming Language contributors.
+ * Use of this source code is governed by the Apache 2.0 license that can be found in the license/LICENSE.txt file.
+ */
+
+package kotlin.collections
+
+import kotlin.internal.PlatformDependent
+
+/**
+ * Classes that inherit from this interface can be represented as a sequence of elements that can
+ * be iterated over.
+ * @param T the type of element being iterated over. The iterator is covariant in its element type.
+ */
+public interface Iterable<out T> {
+    /**
+     * Returns an iterator over the elements of this object.
+     */
+    public operator fun iterator(): Iterator<T>
+}
+
+/**
+ * Classes that inherit from this interface can be represented as a sequence of elements that can
+ * be iterated over and that supports removing elements during iteration.
+ * @param T the type of element being iterated over. The mutable iterator is invariant in its element type.
+ */
+public interface MutableIterable<out T> : Iterable<T> {
+    /**
+     * Returns an iterator over the elements of this sequence that supports removing elements during iteration.
+     */
+    override fun iterator(): MutableIterator<T>
+}
+
+/**
+ * A generic collection of elements. Methods in this interface support only read-only access to the collection;
+ * read/write access is supported through the [MutableCollection] interface.
+ * @param E the type of elements contained in the collection. The collection is covariant in its element type.
+ */
+public interface Collection<out E> : Iterable<E> {
+    // Query Operations
+    /**
+     * Returns the size of the collection.
+     */
+    public val size: Int
+
+    /**
+     * Returns `true` if the collection is empty (contains no elements), `false` otherwise.
+     */
+    public fun isEmpty(): Boolean
+
+    /**
+     * Checks if the specified element is contained in this collection.
+     */
+    public operator fun contains(element: @UnsafeVariance E): Boolean
+
+    override fun iterator(): Iterator<E>
+
+    // Bulk Operations
+    /**
+     * Checks if all elements in the specified collection are contained in this collection.
+     */
+    public fun containsAll(elements: Collection<@UnsafeVariance E>): Boolean
+}
+
+/**
+ * A generic collection of elements that supports adding and removing elements.
+ *
+ * @param E the type of elements contained in the collection. The mutable collection is invariant in its element type.
+ */
+public interface MutableCollection<E> : Collection<E>, MutableIterable<E> {
+    // Query Operations
+    override fun iterator(): MutableIterator<E>
+
+    // Modification Operations
+    /**
+     * Adds the specified element to the collection.
+     *
+     * @return `true` if the element has been added, `false` if the collection does not support duplicates
+     * and the element is already contained in the collection.
+     */
+    public fun add(element: E): Boolean
+
+    /**
+     * Removes a single instance of the specified element from this
+     * collection, if it is present.
+     *
+     * @return `true` if the element has been successfully removed; `false` if it was not present in the collection.
+     */
+    public fun remove(element: E): Boolean
+
+    // Bulk Modification Operations
+    /**
+     * Adds all of the elements of the specified collection to this collection.
+     *
+     * @return `true` if any of the specified elements was added to the collection, `false` if the collection was not modified.
+     */
+    public fun addAll(elements: Collection<E>): Boolean
+
+    /**
+     * Removes all of this collection's elements that are also contained in the specified collection.
+     *
+     * @return `true` if any of the specified elements was removed from the collection, `false` if the collection was not modified.
+     */
+    public fun removeAll(elements: Collection<E>): Boolean
+
+    /**
+     * Retains only the elements in this collection that are contained in the specified collection.
+     *
+     * @return `true` if any element was removed from the collection, `false` if the collection was not modified.
+     */
+    public fun retainAll(elements: Collection<E>): Boolean
+
+    /**
+     * Removes all elements from this collection.
+     */
+    public fun clear(): Unit
+}
+
+/**
+ * A generic ordered collection of elements. Methods in this interface support only read-only access to the list;
+ * read/write access is supported through the [MutableList] interface.
+ * @param E the type of elements contained in the list. The list is covariant in its element type.
+ */
+public interface List<out E> : Collection<E> {
+    // Query Operations
+
+    override val size: Int
+    override fun isEmpty(): Boolean
+    override fun contains(element: @UnsafeVariance E): Boolean
+    override fun iterator(): Iterator<E>
+
+    // Bulk Operations
+    override fun containsAll(elements: Collection<@UnsafeVariance E>): Boolean
+
+    // Positional Access Operations
+    /**
+     * Returns the element at the specified index in the list.
+     */
+    public operator fun get(index: Int): E
+
+    // Search Operations
+    /**
+     * Returns the index of the first occurrence of the specified element in the list, or -1 if the specified
+     * element is not contained in the list.
+     */
+    public fun indexOf(element: @UnsafeVariance E): Int
+
+    /**
+     * Returns the index of the last occurrence of the specified element in the list, or -1 if the specified
+     * element is not contained in the list.
+     */
+    public fun lastIndexOf(element: @UnsafeVariance E): Int
+
+    // List Iterators
+    /**
+     * Returns a list iterator over the elements in this list (in proper sequence).
+     */
+    public fun listIterator(): ListIterator<E>
+
+    /**
+     * Returns a list iterator over the elements in this list (in proper sequence), starting at the specified [index].
+     */
+    public fun listIterator(index: Int): ListIterator<E>
+
+    // View
+    /**
+     * Returns a view of the portion of this list between the specified [fromIndex] (inclusive) and [toIndex] (exclusive).
+     * The returned list is backed by this list, so non-structural changes in the returned list are reflected in this list, and vice-versa.
+     *
+     * Structural changes in the base list make the behavior of the view undefined.
+     */
+    public fun subList(fromIndex: Int, toIndex: Int): List<E>
+}
+
+/**
+ * A generic ordered collection of elements that supports adding and removing elements.
+ * @param E the type of elements contained in the list. The mutable list is invariant in its element type.
+ */
+public interface MutableList<E> : List<E>, MutableCollection<E> {
+    // Modification Operations
+    /**
+     * Adds the specified element to the end of this list.
+     *
+     * @return `true` because the list is always modified as the result of this operation.
+     */
+    override fun add(element: E): Boolean
+
+    override fun remove(element: E): Boolean
+
+    // Bulk Modification Operations
+    /**
+     * Adds all of the elements of the specified collection to the end of this list.
+     *
+     * The elements are appended in the order they appear in the [elements] collection.
+     *
+     * @return `true` if the list was changed as the result of the operation.
+     */
+    override fun addAll(elements: Collection<E>): Boolean
+
+    /**
+     * Inserts all of the elements of the specified collection [elements] into this list at the specified [index].
+     *
+     * @return `true` if the list was changed as the result of the operation.
+     */
+    public fun addAll(index: Int, elements: Collection<E>): Boolean
+
+    override fun removeAll(elements: Collection<E>): Boolean
+    override fun retainAll(elements: Collection<E>): Boolean
+    override fun clear(): Unit
+
+    // Positional Access Operations
+    /**
+     * Replaces the element at the specified position in this list with the specified element.
+     *
+     * @return the element previously at the specified position.
+     */
+    public operator fun set(index: Int, element: E): E
+
+    /**
+     * Inserts an element into the list at the specified [index].
+     */
+    public fun add(index: Int, element: E): Unit
+
+    /**
+     * Removes an element at the specified [index] from the list.
+     *
+     * @return the element that has been removed.
+     */
+    public fun removeAt(index: Int): E
+
+    // List Iterators
+    override fun listIterator(): MutableListIterator<E>
+
+    override fun listIterator(index: Int): MutableListIterator<E>
+
+    // View
+    override fun subList(fromIndex: Int, toIndex: Int): MutableList<E>
+}
+
+/**
+ * A generic unordered collection of elements that does not support duplicate elements.
+ * Methods in this interface support only read-only access to the set;
+ * read/write access is supported through the [MutableSet] interface.
+ * @param E the type of elements contained in the set. The set is covariant in its element type.
+ */
+public interface Set<out E> : Collection<E> {
+    // Query Operations
+
+    override val size: Int
+    override fun isEmpty(): Boolean
+    override fun contains(element: @UnsafeVariance E): Boolean
+    override fun iterator(): Iterator<E>
+
+    // Bulk Operations
+    override fun containsAll(elements: Collection<@UnsafeVariance E>): Boolean
+}
+
+/**
+ * A generic unordered collection of elements that does not support duplicate elements, and supports
+ * adding and removing elements.
+ * @param E the type of elements contained in the set. The mutable set is invariant in its element type.
+ */
+public interface MutableSet<E> : Set<E>, MutableCollection<E> {
+    // Query Operations
+    override fun iterator(): MutableIterator<E>
+
+    // Modification Operations
+
+    /**
+     * Adds the specified element to the set.
+     *
+     * @return `true` if the element has been added, `false` if the element is already contained in the set.
+     */
+    override fun add(element: E): Boolean
+
+    override fun remove(element: E): Boolean
+
+    // Bulk Modification Operations
+
+    override fun addAll(elements: Collection<E>): Boolean
+    override fun removeAll(elements: Collection<E>): Boolean
+    override fun retainAll(elements: Collection<E>): Boolean
+    override fun clear(): Unit
+}
+
+/**
+ * A collection that holds pairs of objects (keys and values) and supports efficiently retrieving
+ * the value corresponding to each key. Map keys are unique; the map holds only one value for each key.
+ * Methods in this interface support only read-only access to the map; read-write access is supported through
+ * the [MutableMap] interface.
+ * @param K the type of map keys. The map is invariant in its key type, as it
+ *          can accept key as a parameter (of [containsKey] for example) and return it in [keys] set.
+ * @param V the type of map values. The map is covariant in its value type.
+ */
+public interface Map<K, out V> {
+    // Query Operations
+    /**
+     * Returns the number of key/value pairs in the map.
+     */
+    public val size: Int
+
+    /**
+     * Returns `true` if the map is empty (contains no elements), `false` otherwise.
+     */
+    public fun isEmpty(): Boolean
+
+    /**
+     * Returns `true` if the map contains the specified [key].
+     */
+    public fun containsKey(key: K): Boolean
+
+    /**
+     * Returns `true` if the map maps one or more keys to the specified [value].
+     */
+    public fun containsValue(value: @UnsafeVariance V): Boolean
+
+    /**
+     * Returns the value corresponding to the given [key], or `null` if such a key is not present in the map.
+     */
+    public operator fun get(key: K): V?
+
+    /**
+     * Returns the value corresponding to the given [key], or [defaultValue] if such a key is not present in the map.
+     *
+     * @since JDK 1.8
+     */
+    @SinceKotlin("1.1")
+    @PlatformDependent
+    public fun getOrDefault(key: K, defaultValue: @UnsafeVariance V): V {
+        // See default implementation in JDK sources
+        throw NotImplementedError()
+    }
+
+    // Views
+    /**
+     * Returns a read-only [Set] of all keys in this map.
+     */
+    public val keys: Set<K>
+
+    /**
+     * Returns a read-only [Collection] of all values in this map. Note that this collection may contain duplicate values.
+     */
+    public val values: Collection<V>
+
+    /**
+     * Returns a read-only [Set] of all key/value pairs in this map.
+     */
+    public val entries: Set<Map.Entry<K, V>>
+
+    /**
+     * Represents a key/value pair held by a [Map].
+     */
+    public interface Entry<out K, out V> {
+        /**
+         * Returns the key of this key/value pair.
+         */
+        public val key: K
+
+        /**
+         * Returns the value of this key/value pair.
+         */
+        public val value: V
+    }
+}
+
+/**
+ * A modifiable collection that holds pairs of objects (keys and values) and supports efficiently retrieving
+ * the value corresponding to each key. Map keys are unique; the map holds only one value for each key.
+ * @param K the type of map keys. The map is invariant in its key type.
+ * @param V the type of map values. The mutable map is invariant in its value type.
+ */
+public interface MutableMap<K, V> : Map<K, V> {
+    // Modification Operations
+    /**
+     * Associates the specified [value] with the specified [key] in the map.
+     *
+     * @return the previous value associated with the key, or `null` if the key was not present in the map.
+     */
+    public fun put(key: K, value: V): V?
+
+    /**
+     * Removes the specified key and its corresponding value from this map.
+     *
+     * @return the previous value associated with the key, or `null` if the key was not present in the map.
+     */
+    public fun remove(key: K): V?
+
+    /**
+     * Removes the entry for the specified key only if it is mapped to the specified value.
+     *
+     * @return true if entry was removed
+     */
+    @SinceKotlin("1.1")
+    @PlatformDependent
+    public fun remove(key: K, value: V): Boolean {
+        // See default implementation in JDK sources
+        return true
+    }
+
+    // Bulk Modification Operations
+    /**
+     * Updates this map with key/value pairs from the specified map [from].
+     */
+    public fun putAll(from: Map<out K, V>): Unit
+
+    /**
+     * Removes all elements from this map.
+     */
+    public fun clear(): Unit
+
+    // Views
+    /**
+     * Returns a [MutableSet] of all keys in this map.
+     */
+    override val keys: MutableSet<K>
+
+    /**
+     * Returns a [MutableCollection] of all values in this map. Note that this collection may contain duplicate values.
+     */
+    override val values: MutableCollection<V>
+
+    /**
+     * Returns a [MutableSet] of all key/value pairs in this map.
+     */
+    override val entries: MutableSet<MutableMap.MutableEntry<K, V>>
+
+    /**
+     * Represents a key/value pair held by a [MutableMap].
+     */
+    public interface MutableEntry<K, V> : Map.Entry<K, V> {
+        /**
+         * Changes the value associated with the key of this entry.
+         *
+         * @return the previous value corresponding to the key.
+         */
+        public fun setValue(newValue: V): V
+    }
+}
+Современные историки медицины полагают, что первые методы анестезии возникли еще на заре развития человечества. Разумеется, тогда было принято действовать просто и грубо: например, вплоть до 18 века общий наркоз пациент получал в виде сильного удара дубинкой по голове; после того, как он терял сознание, врач мог приступать к операции. В качестве местной анестезии с давних времен использовались наркотические препараты. В одной из древнейших медицинских рукописей в качестве обезболивающего средства рекомендуется давать пациентам лекарства на основе опиума. В Китае и Индии опиум долгое время был неизвестен, однако там довольно рано открыли чудесные свойства марихуаны. Во 2 веке знаменитый китайский врач Хуа То во время операций давал пациентам в качестве анестезии изобретенную им смесь вина и растертой в порошок конопли. Тем временем на территории еще не открытой Колумбом Америки местные индейцы активно использовали в качестве анестезии кокаин из листьев растения кока. Достоверно известно, что инки в высокогорных Андах использовали коку для местной анестезии: местный знахарь жевал листья, а потом капал насыщенной соком слюной на рану пациента, чтобы облегчить его боль. Когда люди научились производить крепкий алкоголь, анестезия стала более доступна. Многие армии стали брать с собой в поход запасы спиртного, чтобы давать его в качестве обезболивающего раненым солдатам. Не секрет, что этот метод анестезии до сих пор используется в критических ситуациях, когда нет возможности использовать современные препараты. В редких случаях врачи пытались использовать в качестве анестезии силу внушения, например, погружали пациентов в гипнотический сон. Современным последователем этой практики стал скандально известный психотерапевт Анатолий Кашпировский.
+2  30 сентября 1846 года он провёл операцию по удалению зуба у пациента, используя эфир в качестве наркоза. Однако в историю вошла его более поздняя операция, 16 октября 1846 года в той же самой бостонской больнице, где был осмеян его учитель, Уильям Мортон публично удалил опухоль на шее пациента, в тот момент, когда тот находился под действием паров эфира. Операция прошла успешно, больной не почувствовал боли. Уильям Мортон не был альтруистом, он хотел не только славы, но и денег. По этой причине он во время операции не признался, что использовал для анестезии обыкновенный медицинский эфир, а стал утверждать, что это изобретённый им газ "летеон" (от слова "Лета", река забвения). Мортон получил на своё изобретение патент, но это ему не помогло. Довольно быстро выяснилось, что главный компонент "летеона" - это эфир, а он под патент не попадал. По обе стороны океана врачи начали использовать медицинский эфир для анестезии, Мортон пытался отстаивать свои права в суде, но денег так и не получил. Зато ему досталась слава, именно его обычно называют создателем анестезии. Опыт применения наркоза в России также начинается с эфира. 7 февраля 1847 года его применяет Ф.И.Иноземцев. В клинике факультетской хирургии Московского университета он проводит операцию по поводу рака молочной железы. Неделей позже - 14 февраля 1847 года свою первую операцию под эфирным наркозом во 2-м Военно-сухопутном госпитале Санкт-Петербурга осуществляет другой великий русский хирург - Н.И.Пирогов.
+3	Зато сенсацией стала серия научных статей про кокаин, написанных молодым психиатром Зигмундом Фрейдом. Фрейд впервые попробовал кокаин в 1884 году и был поражен его действием: употребление этого вещества излечило его от депрессии, придало уверенности в себе. В том же году молодой ученый пишет статью "О коке", где настойчиво рекомендует использовать кокаин как местное обезболивающее средство, а также как лекарство от астмы, расстройства пищеварения, депрессии, неврозов. Исследования Фрейда в этой области активно поддерживались фармацевтическими фирмами, которые предвкушали огромные прибыли. Будущий отец психоанализа опубликовал аж 8 статей о свойствах кокаина, однако в последних работах на эту тему он уже менее восторженно писал об этом веществе. В этом нет ничего удивительного, ведь от злоупотребления кокаином умер близкий друг Фрейда Эрнст фон Фляйшль. Хотя об анестезирующем действии кокаина уже было известно по работам Анрепа и Фрейда, славу первооткрывателя местной анестезии получил офтальмолог Карл Коллер. Этот молодой врач, как и Зигмунд Фрейд, работал в Венской Общей больнице и жил с ним на одном этаже. Когда Фрейд рассказал ему о своих экспериментах с кокаином, Коллер решил проверить, может ли это вещество использоваться в качестве местной анестезии при операции на глазах. Опыты показали его эффективность, и в 1884 году Коллер доложил о результатах исследований на заседании Общества врачей Вены. Кокаин использовали не только врачи, но и все желающие, он свободно продавался во всех аптеках и пользовался почти такой же популярностью, как аспирин в наши дни. В 20 веке в анестезиологии кокаин заменили более безопасные препараты: прокаин, новокаин, лидокаин. Так анестезиология наконец-то стала не только эффективной, но и безопасной.
+4	Считается, что роскошные волосы - один из главных инструментов женской привлекательности. Но на самом деле мужчинам в этом плане повезло намного больше: даже при абсолютном отсутствии шевелюры они могут выглядеть стильно, брутально и сексуально. Но если волосы все еще не покинули мудрые головы наших спутников жизни, необходимо разобраться, как не испортить подаренное природой сокровище неумелым уходом и неудачной стрижкой. Главное правило: для каждого типа волос - свои решения. Большинство мужчин европейского типа имеют именно такие волосы: русые, создающие легкую "волну" и довольно густые. Сам по себе такой тип волос - настоящий подарок, ведь их обладатель может выбрать огромное количество стилей, стоит лишь приложить немного усилий. Самая грубая ошибка при стрижке таких волос - убирать слишком много по бокам и при этом оставлять длинные волосы сверху. Если бы волосы были совершенно прямые, подобная прическа еще могла бы выглядеть аккуратно, пусть и очень консервативно. Но стоит волосам отрасти на несколько миллиметров, стрижка теряет форму. Не стоит пренебрегать средствами для укладки: небольшое количество пены позволит придать волосам ухоженный вид и не позволит им взъерошиваться. Не менее досадная ошибка - использование машинки для стрижки волос по бокам и сзади. Ножницы и только ножницы - только благодаря этому инструменту в умелых руках парикмахера стрижка получится однородной и ровной. Во-первых, классика: чуть большая длина сверху и соответственно меньшая - по бокам и сзади. Кстати, такой вариант чаще всего мальчики выбирают еще в школе и не меняют стрижку практически до старости. Во-вторых, более современная и стильная стрижка, при которой длина волос остается везде одинаковой. Усмирить непокорные пряди можно с помощью мусса, причем создать эффект актуального "творческого беспорядка" на голове - проще простого. Прямые и тонкие: хрупкая мечта. Иметь такой тип волос хотят большинство мужчин, но обладают немногие. Такие волосы характерны для представителей восточной Азии и Испании. Уже сам по себе такой тип волос - мягкий и неизменно блестящий - выглядит здорово, но многим мужчинам удается испортить и его плохой стрижкой. Далеко не всем молодым людям по душе тот факт, что их волосы ведут себя слишком свободно. Проблему свисающих волос они в буквальном смысле пресекают на корню, то есть делают слишком короткую стрижку. Хотя намного правильнее, наоборот, отрастить волосы (в разумных пределах) и с помощью кондиционеров и муссов придавать им ухоженный, блестящий вид и легкий объем. Но если все-таки вы хотите волосы покороче, избегайте следующей распространенной ошибки - стрижки "под горшок". Поверьте, подобный вариант смотрится мило лишь на школьниках. Впрочем, и другая крайность неприемлема: если вы не средневековый король, не рок-звезда или байкер, не стоит отращивать слишком длинные волосы. Кудрявые волосы чаще всего смотрятся не просто хорошо, но даже роскошно. Поскольку в большинстве случаев они еще и густые. Такой шевелюрой могут похвастаться греки, испанцы, итальянцы, евреи. Впрочем, пояснения все-таки необходимы, поскольку даже эти счастливчики умудряются испортить этот дар природы. Чтобы кудри выглядели более естественно и свободно, их обладатели иногда злоупотребляют гелями, восками и кремами, которые утяжеляют волосы. А это не только вредно, но и неприятно визуально: создается ощущение, что волосы мылись уже очень давно. Но и пренебрегать средствами для укладки не стоит. Хорошо, если вы студент или артист. Но даже самые шикарные кудри, торчащие во все стороны, не совместимы с деловым стилем. Классический вариант: постричь волосы довольно коротко и зачесывать назад с помощью небольшого количества мусса. Либо сделать пробор с легким акцентом на любую сторону. Кстати, многие кудрявые мужчины вообще предпочитают не "заморачиваться" и делают максимально короткую стрижку, не требующую никакой укладки. Что тоже выглядит очень эффектно. Чаще всего облысение начинается с того, что волосы на линии лба или на макушке становятся более тонкими, а затем и вовсе начинают выпадать. Очень быстро появляются либо залысины, либо лысый участок на затылке, при этом волосы сбоку и сзади не выпадают довольно-таки долго. Самая грубая ошибка - пытаться замаскировать лысину, зачесывая волосы назад или набок. На самом деле это лишь подчеркивает проблему. Отращивать имеющиеся волосы слишком длинными - также неверный путь, акцентирующий внимание на лысине. Молодые люди идут еще дальше: используют гель. Гель, который склеивает волосы и еще больше обнажает лысину. При начальной стадии облысения используйте муссы и кондиционеры для того, чтобы придать волосам более естественный вид. Отращивайте волосы лишь на несколько сантиметров и зачесывайте их так, чтобы не акцентировать внимание на линии роста волос. Но если лысина становится все более крупной, вы можете выбрать радикальный - и, как правило, оптимальный - вариант: побриться наголо. Во-первых, это очень удобно, а во-вторых, сексуально. Разумеется, перечисленные типы волос и вариантов стиля - далеко не истина в последней инстанции. Главное - обязательно уделяйте вашим волосам внимание. Для того чтобы определиться с образом, не бойтесь задавать вопросы: стилисту, парикмахеру или даже собственной спутнице жизни (последние, кстати, знают об уходе за волосами гораздо больше, чем вам кажется).
+5	Ни одно животное не способно испытывать скуку, когда его жизненные потребности удовлетворены. Животные вполне комфортно чувствуют себя в состоянии покоя. Нормальная скука - это естественная реакция на определенную ситуацию. Встречается также неситуативная и продолжительная скука: она может оказаться симптомом депрессии. Потому что начало депрессии, как правило, знаменуется не подавленным настроением, а как раз утратой интересов ко всему, что еще не так давно представлялось значимым. И, наконец, патологическая скука - это состояние, в котором человек скучает в течение всей своей жизни. Скука, например, у древних греков так и не выявлена. В эпоху Возрождения появилась меланхолия, которую связывали скорее с телесными недугами, чем с душевными. Позднее появились синонимичные хандра и сплин - уже томительная скука. С тех пор скука не проходила. Согласно представлению, что скука - это "неубиваемое" время, скука - неизбежный итог растерянности, которую испытывает человек, удовлетворивший свои базовые потребности и высвободивший немного свободного времени. Причем, эта закономерность работает как на частном уровне (например, скука пенсионера или безработного), так и на общесоциальном: неслучайно в индустриальную эпоху люди, работающие всего 8-9 часов в сутки, скучают гораздо отчаяннее, чем крестьяне, вынужденные работать постоянно, лишь с перерывами на сон. Психологи считают, что одна из возрастных задач, которую должен решить ребенок в 8-10 лет, - умение самостоятельно находить себе занятия и развлечения. Наверное, это идеалистическое представление: как показывает практика, многие люди не решают эту проблему и к 80 годам. Скука (а вместе с ней подавленность и апатия) часто возникает, если способности человека гораздо выше, чем требует его окружение и конкретные ситуации. В результате - отсутствие поглощенности и захваченности процессом. Скука - как недостаток мотивации. Об этом так любят говорить все, кто имеет отношение к работе с персоналом. Согласно их представлениям, все очень просто: если человек мотивирован и видит перед собой цель, он просто не может заскучать. Все это здорово, но ситуации, в которых цели видны, а смысл не обнаружен, достаточно часты в нашей жизни (офисные работники знают). Поэтому скука как отсутствие мотивации является всего лишь проявлением большего: скуки как отсутствия смысла. Скуку, все нарастающую в европейском обществе можно связать не только с высвобождением большего количества свободного времени, но и с отрывом от традиционного мировосприятия. Иначе говоря, пока человек жил традицией, вопрос поиска целей и смыслов перед ним даже не стоял: живи так, как жили твои предки, и да продлятся твои годы на земле. С исчезновением традиционного общества оказалось, что для каждого цели - индивидуальны, среди их множества надо непременно найти свою. А жить без цели - вроде бы как и не жить вовсе. Лучше уж плохонькая, чужая, неподходящая, зато цель. Скука может быть осознанной и неосознанной. Ведь правда же можно жить в ежедневной рутине, просто не осознавая, что тебе скучно до скрежета зубовного? И так случается довольно часто, тем более что наготове куча оправданий: все так живут, ничего не поделать, надо же как-то существовать, все будет хорошо. Для того, чтобы осознать свою скуку, нужна немалая смелость - наверное, это имел в виду Бродский, когда писал: "Скука - обнажение корней бытия: чистых, ничем не прикрытых. Требуется мужество, чтобы это выдержать, не убегать от этого. Когда вас одолевает скука, предайтесь ей. Скука - это ваше окно на бесконечность времени, то есть на вашу незначительность в нем. Это, конечно, не прозвучит музыкой для вашего слуха; однако ощущение тщетности, ограниченной значимости ваших даже самых высоких, самых пылких действий лучше, чем иллюзия их плодотворности и сопутствующее этому самомнение". Можно лечить болезнь, борясь с симптомами, а не с причиной. Точно так же можно попытаться компенсировать скуку, вместо нудных разбирательств в том, чем же она вызвана. К счастью, общество предлагает некоторый набор средств легальной компенсации: СМИ (следим за ужасами и катастрофами, и жизнь покажется ярче), алкоголь (освобождаем расхристанное подсознание), туризм (внимательно смотрим на оригинальненькое). Для общества важно одно: чтобы компенсация не стала деструктивной - а уж то, что она дает временное облегчение, дело десятое.
+7	Многие люди периодически жалуются на изжогу, загрудинное жжение и боль. Изжога - один из симптомов целого ряда заболеваний, среди которых, наверное, самое распространенное - гастрит. Человек может испытывать неприятные ощущения также при язвенной и гастроэзофагеальной болезнях и в других случаях. Причин возникновения изжоги много, но механизм возникновения болезненных ощущений один. В норме пища через пищевод попадает в желудок. Их разделяет так называемый кардиальный сфинктер - мышечное кольцо, задача которого пропустить пищу сверху вниз и предотвращать попадание в пищевод кислого содержимого желудка снизу вверх. Но если по каким-то причинам сфинктер не срабатывает, содержимое желудка раздражает пищевод и человек ощущает жжение и боль. Если приступы возникают часто и регулярно, необходим визит к врачу, который назначит необходимые исследования. К какому врачу обращаться? Не праздный вопрос. Дело в том, что чувство жжения за грудиной может быть проявлением заболеваний сердца и сосудов. Оно характерно для стенокардии, иногда возникает вследствие повышенного артериального давления. Определить, пищеварительная изжога мучает пациента или сердце, поможет нитроглицерин. Если после его приема жжение уменьшается, следует посетить кардиолога. Когда изжога случается пару раз в год, то особо беспокоиться не стоит. Скорее всего, причины в неправильном питании, злоупотреблении острой или жирной пищей, алкоголем. Располагающие к изжоге факторы - избыточный вес и пожилой возраст. У некоторых болезненные ощущения могут вызвать кислые фрукты - лимоны, яблоки, сливы и другие продукты, содержащие кислоту, в том числе кефир и некоторые сорта черного хлеба. Загрудинное жжение может возникнуть внезапно при поднятии тяжестей. В этом случае резко возрастает внутрибрюшное давление и становится возможен выброс желудочного содержимого в пищевод. Народные средства борьбы с изжогой - сода, мел, активированный уголь, отвар льняного семени. Хорошо помогает обычное свежее (не кислое) молоко. Но простые средства действуют только на симптом, если же он - спутник заболевания, необходимо лечение, назначенное специалистом. При отсутствии заболеваний для борьбы с изжогой медики советуют принимать любые препараты, уменьшающие секрецию желудочного сока. Это группа лекарств на основе солей алюминия, обладающих обволакивающим действием, защищающих слизистые оболочки пищевода и желудка. Непосредственно на желудочную секрецию действуют Н2-блокаторы и блокаторы протонной помпы, в комплексе с которыми применяют лекарства, регулирующие моторику желудочно-кишечного тракта. Чтобы не провоцировать изжогу, нужно соблюдать правильный режим питания. Есть помалу и часто, пять-шесть раз в сутки, не допуская переедания и переполнения желудка. После еды лучше погулять или постоять, в крайнем случае, посидеть, но никак не ложиться вздремнуть, "чтобы жирок завязался", чем грешат многие наши сограждане. Желательно исключить из рациона или максимально ограничить потребление продуктов, способствующих метеоризму - ржаного хлеба, бобовых, капусты и газированных напитков. Продукты, способствующие увеличению выработки желудочного сока, среди которых жареные блюда и наваристые бульоны, совсем не способствуют здоровому самочувствию и могут вызывать приступы изжоги. Организм человека не может существовать без поступления извне питательных веществ. Постарайтесь не употреблять вместе с ними те, которые вызывают
+КОНЕЦ!!!
